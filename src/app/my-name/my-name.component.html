@@ -1,0 +1,39 @@
+<!--
+<h1 [class]="className" (mouseover)="onNameMouseOver()">
+  {{ name === "Allan" ? "Hi!" : "Different name" }}
+</h1>
+<input type="text" [(ngModel)]="name" />
+<input type="text" [(ngModel)]="name" />
+-->
+
+<!-- directives - change appearance of the DOM -->
+<div [style.font-weight]="isBold ? 'bold' : 'normal'"> {{name}} </div>
+<button (click)="toggleBold()"> Toggle Bold </button>
+
+<br>
+<div [ngStyle]="currentStyles"> {{name}} </div>
+<br>
+<label> Sans-serif: <input type="checkbox" [(ngModel)]="isSansSerif"/> </label>
+<label> Bold: <input type="checkbox" [(ngModel)]="isBold"/> </label>
+<label> Large: <input type="checkbox" [(ngModel)]="isLarge"/> </label>
+<br>
+<button (click)="setCurrentStyles()"> Refresh Styles </button>
+<br>
+
+<div [ngClass]="currentClasses"> {{name}} </div>
+<br>
+<label> Uppercase: <input type="checkbox" [(ngModel)]="isUppercase"/> </label>
+<label> Italic: <input type="checkbox" [(ngModel)]="isItalic"/> </label>
+<label> Red: <input type="checkbox" [(ngModel)]="isRed"/> </label>
+<br>
+<button (click)="setCurrentClasses()"> Refresh Class </button>
+
+<br>
+<ol>
+  <li *ngFor="let user of users">
+    <div [ngClass]="user.id % 2 === 0 ? 'blue' : 'red' "> {{user.name}} - {{user.email}} </div>
+  </li>
+</ol>
+
+
+

@@ -1,0 +1,32 @@
+<p>users-detail-view works!</p>
+
+<mat-form-field appearance="fill">
+  <mat-label> ID </mat-label>
+  <input matInput [(ngModel)]="user.id" />
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label> Name </mat-label>
+  <input matInput [(ngModel)]="user.name" />
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label> Email </mat-label>
+  <input matInput [(ngModel)]="user.email" />
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label> Username </mat-label>
+  <input matInput [(ngModel)]="user.username" />
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label> Phone </mat-label>
+  <input matInput [(ngModel)]="user.phone" />
+</mat-form-field>
+
+<br>
+<span>
+  <button mat-raised-button color="primary" (click)="saveChanges()"> Save Changes </button>
+  <button mat-button (click)="goBackToUsers()"> Back </button>
+</span>
