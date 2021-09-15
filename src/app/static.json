@@ -1,0 +1,5 @@
+{
+  "root": "dist/my-first-app",
+  "clean_urls": true,
+  "routes": { "/**": "index.html"}
+}
